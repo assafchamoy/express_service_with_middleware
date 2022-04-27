@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "packages": {
+    "@map-colonies/storage-explorer-middleware-problematic": {
+      "version": "1.0.2",
+      "signature": "57847cf187f8e687453a68f20f70efe7",
+      "file": true
+    },
+    "@map-colonies/storage-explorer-middleware-fixed": {
+      "version": "1.2.4",
+      "signature": "4bd9c2ae35662351b53e377cb331bc06",
+      "file": true
+    }
+  }
+}

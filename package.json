@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "build": "tsc --project ./",
+    "start:dev": "ts-node ./src/api/server.ts",
+    "start:prod": "node dist/server.js"
+  },
+  "name": "express_service_with_middleware",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/assafchamoy/express_service_with_middleware.git",
+  "author": "Assaf Chamoy <assafchamoy97@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@map-colonies/storage-explorer-middleware-fixed": "file:.yalc/@map-colonies/storage-explorer-middleware-fixed",
+    "@map-colonies/storage-explorer-middleware-problematic": "file:.yalc/@map-colonies/storage-explorer-middleware-problematic",
+    "cjs": "^0.0.11",
+    "express": "^4.18.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.29",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}

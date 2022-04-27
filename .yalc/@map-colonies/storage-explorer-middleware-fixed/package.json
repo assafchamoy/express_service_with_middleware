@@ -1,0 +1,48 @@
+{
+  "name": "@map-colonies/storage-explorer-middleware-fixed",
+  "version": "1.2.4",
+  "description": "This is template for map colonies typescript packages",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test:unit": "jest --config=./tests/configurations/unit/jest.config.js",
+    "test:integration": "jest --config=./tests/configurations/integration/jest.config.js",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "prelint:fix": "npm run format:fix",
+    "prelint": "npm run format",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "release": "standard-version",
+    "test": "npm run test:unit && npm run test:integration",
+    "prebuild": "npm run clean",
+    "build": "tsc --project tsconfig.build.json",
+    "start": "npm run build && cd dist && node ./index.js",
+    "clean": "rimraf dist",
+    "prepack": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MapColonies/storage-explorer-middleware.git"
+  },
+  "author": "MapColonies",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MapColonies/storage-explorer-middleware/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "homepage": "https://github.com/MapColonies/storage-explorer-middleware#readme",
+  "dependencies": {
+    "@map-colonies/error-types": "^1.1.0",
+    "config": "^3.3.7",
+    "express": "^4.17.2"
+  },
+  "yalcSig": "4bd9c2ae35662351b53e377cb331bc06"
+}
